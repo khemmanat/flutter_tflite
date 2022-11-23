@@ -1148,8 +1148,8 @@ void initPoseNet() {
       [_tflite_parts_ids setValue:[NSNumber numberWithInt:i] forKey:_tflite_part_names[i]];
     
     for (int i = 0; i < [_tflite_pose_chain count]; ++i) {
-      [_tflite_parent_to_child_edges addObject:_tflite_parts_ids[pose_chain[i][1]]];
-      [_tflite_child_to_parent_edges addObject:_tflite_parts_ids[pose_chain[i][0]]];
+      [_tflite_parent_to_child_edges addObject:_tflite_parts_ids[_tflite_pose_chain[i][1]]];
+      [_tflite_child_to_parent_edges addObject:_tflite_parts_ids[_tflite_pose_chain[i][0]]];
     }
   }
 }
